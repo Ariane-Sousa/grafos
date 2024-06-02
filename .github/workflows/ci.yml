@@ -9,21 +9,18 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
-    services:
-      db:
-        image: postgis/postgis
-        ports:
-          - "5432:5432"
-        env:
-          POSTGRES_USER: spotsat
-          POSTGRES_PASSWORD: spotsat
-          POSTGRES_DB: graph_db
-
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v2
 
-    - name: Build and Run Docker Compose
+    - name: Build Docker Compose
       run: |
-        docker-compose up -d
+        docker-compose up --build -d
+
+    - name: Run Lint
+      run: |
+        docker-compose exec web pylint graphs
+
+    - name: Run Tests
+      run: |
         docker-compose exec web pytest
