@@ -15,12 +15,12 @@ jobs:
 
     - name: Build Docker Compose
       run: |
-        docker-compose up --build -d
+          docker-compose build
 
     - name: Run Lint
       run: |
-        docker-compose exec web pylint graphs
+        pylint graphs
 
     - name: Run Tests
       run: |
-        docker-compose exec web pytest
+        pytest
