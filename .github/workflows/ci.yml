@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Build Docker image
+      run: docker-compose up --build -d
+
+    - name: Run tests
+      run: docker exec desafio-spotsat_web_1 pytest
+
+    - name: Run pylint
+      run: docker exec desafio-spotsat_web_1 pylint graphs
