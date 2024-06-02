@@ -1,0 +1,16 @@
+[MASTER]
+disable=
+    missing-module-docstring,
+    missing-class-docstring,
+    missing-function-docstring,
+    no-self-argument,
+    too-few-public-methods,
+    unused-import,
+    trailing-newlines,
+    wrong-import-order,
+    line-too-long,
+    logging-fstring-interpolation,
+    ungrouped-imports
+
+[REPORTS]
+output-format=colorized
