@@ -13,11 +13,8 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Build Docker image
-      run: docker-compose up --build -d
-
-    - name: Run tests
-      run: docker-compose exec -T web pytest
-
-    - name: Run pylint
-      run: docker-compose exec -T web pylint graphs
+    - name: Build and test
+      run: |
+        docker-compose build
+        docker-compose run --rm web pytest
+        docker-compose run --rm web lint
