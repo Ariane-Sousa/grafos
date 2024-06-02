@@ -23,5 +23,5 @@ jobs:
 
     - name: Run Pytest
       run: |
-          docker-compose up --d
+          docker-compose up -d
           docker-compose run web pytest
