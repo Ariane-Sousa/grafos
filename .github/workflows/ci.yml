@@ -19,5 +19,9 @@ jobs:
 
     - name: Run Lint
       run: |
-         docker-compose run web pylint graphs
+          docker-compose run web pylint graphs
 
+    - name: Run Pytest
+      run: |
+          docker-compose up --d
+          docker-compose run web pytest

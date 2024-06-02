@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-SQLALCHEMY_DATABASE_URL = "postgresql://spotsat:spotsat@localhost/graph_db"
+SQLALCHEMY_DATABASE_URL = "postgresql://spotsat:spotsat@db/graph_db"
 
 engine = create_engine(
     SQLALCHEMY_DATABASE_URL
