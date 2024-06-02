@@ -1,4 +1,4 @@
-name: CI
+name: Continuous Integration
 
 on:
   pull_request:
@@ -6,18 +6,24 @@ on:
       - main
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
 
+    services:
+      db:
+        image: postgis/postgis
+        ports:
+          - "5432:5432"
+        env:
+          POSTGRES_USER: spotsat
+          POSTGRES_PASSWORD: spotsat
+          POSTGRES_DB: graph_db
+
     steps:
-    - name: Checkout repository
+    - name: Checkout Repository
       uses: actions/checkout@v2
 
-    - name: Build
+    - name: Build and Run Docker Compose
       run: |
-        docker-compose build
-
-    - name: Teste Pytest and Lint
-      run: |
-        docker-compose run --rm web pytest
-        docker-compose run --rm web lint
+        docker-compose up -d
+        docker-compose exec web pytest
