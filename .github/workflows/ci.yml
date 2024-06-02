@@ -17,7 +17,7 @@ jobs:
       run: docker-compose up --build -d
 
     - name: Run tests
-      run: docker-compose exec web pytest
+      run: docker-compose -T exec web pytest
 
     - name: Run pylint
-      run: docker-compose exec web pylint graphs
+      run: docker-compose -T exec web pylint graphs
