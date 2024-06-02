@@ -18,5 +18,5 @@ jobs:
 
     - name: Run tests
       run: |
-         docker exec -it app-web-1 pytest
-         docker exec -it app-web-1 pylint graphs
+         docker exec -it desafio-spotsat_web_1 pytest
+         docker exec -it desafio-spotsat_web_1 pylint graphs
