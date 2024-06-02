@@ -17,7 +17,7 @@ jobs:
       run: docker-compose up --build -d
 
     - name: Run tests
-      run: docker exec desafio-spotsat_web_1 pytest
+      run: docker-compose exec web pytest
 
     - name: Run pylint
-      run: docker exec desafio-spotsat_web_1 pylint graphs
+      run: docker-compose exec web pylint graphs
