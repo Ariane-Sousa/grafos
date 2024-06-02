@@ -1,5 +1,4 @@
 [MASTER]
-
 disable=
     missing-module-docstring,
     missing-class-docstring,
@@ -10,8 +9,8 @@ disable=
     trailing-newlines,
     wrong-import-order,
     line-too-long,
-    logging-fstring-interpolation
+    logging-fstring-interpolation,
+    ungrouped-imports
 
 [REPORTS]
-
 output-format=colorized
