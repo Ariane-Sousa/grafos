@@ -1,6 +1,6 @@
 ## Desafio - Grafos Backend Pleno
 
-Seja bem-vindo! Este desafio foi projetado para avaliar a sua capacidade técnica de implementação de um projeto backend e utilização de algoritimos de otimização e uma tecnologia de georreferenciamento. Na Spotsat precisamos diariamente trabalhar com referências geográficas e para isso utilizamos uma extensão no postgres, o postgis. O desafio consiste na construção de uma api que possa utilizá-lo.
+Seja bem-vindo! Este desafio foi projetado para avaliar a sua capacidade técnica de implementação de um projeto backend e utilização de algoritimos de otimização e uma tecnologia de georreferenciamento. Na Spotsat precisamos diariamente trabalhar com referências geográficas e para isso utilizamos uma extensão no postgres, o postgis. O desafio consiste na construção de uma api que possa utilizá-lo. 
 
 ### Proposta
 
