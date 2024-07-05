@@ -1,4 +1,4 @@
-## Desafio - Grafos Backend Pleno
+## Desafio - Grafos
 
 Seja bem-vindo! Este desafio foi projetado para avaliar a sua capacidade técnica de implementação de um projeto backend e utilização de algoritimos de otimização e uma tecnologia de georreferenciamento. Na Spotsat precisamos diariamente trabalhar com referências geográficas e para isso utilizamos uma extensão no postgres, o postgis. O desafio consiste na construção de uma api que possa utilizá-lo. 
 
@@ -21,8 +21,3 @@ Crie um CRUD de grafos com coordenadas geográficas(pontos ou polígonos) que de
     • Implementar implementação RBAC básica para organização dos usuários e níveis de acesso.
     • Deploy básico em plataforma gratuita de sua escolha.
     • Documentação de uso(Contrato da API).
-
-### Como entregar
-Você deve disponibilizar seu código no Github, em uma branch separada da main e marcar o avaliador como reviewer, seu pr deve seguir os padrões adequados. Não esqueça de fazer self review!
-Além disso, crie um readme.
-Bom desafio!
