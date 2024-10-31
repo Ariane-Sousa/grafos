@@ -1,0 +1,27 @@
+name: Continuous Integration
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Build Docker Compose
+      run: |
+          docker-compose build
+
+    - name: Run Lint
+      run: |
+          docker-compose run web pylint graphs
+
+    - name: Run Pytest
+      run: |
+          docker-compose up -d
+          docker-compose run web pytest
